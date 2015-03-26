@@ -5,7 +5,7 @@
 #
 
 # Pull base image.
-FROM library/node
+FROM library/node:0.10
 
 # Install Bower & Grunt
 RUN npm install -g bower grunt-cli
