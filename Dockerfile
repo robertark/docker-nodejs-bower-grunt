@@ -5,13 +5,20 @@
 #
 
 # Pull base image.
-FROM library/node
+FROM digitallyseamless/nodejs-bower-grunt
 
-# Install Bower & Grunt
-RUN npm install -g bower grunt-cli
+# Setup build folder
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
 
-# Define working directory.
-WORKDIR /data
+# Onbuild instructions
+ONBUILD COPY package.json /usr/src/app/
+ONBUILD RUN npm install
+ONBUILD COPY bower.json .bowerrc* /usr/src/app/
+ONBUILD RUN bower install --allow-root
+ONBUILD COPY . /usr/src/app/
+ONBUILD RUN [[ -f "Gruntfile.js" ]] && grunt build || /bin/true
+ONBUILD ENV NODE_ENV production
 
 # Define default command.
-CMD ["bash"]
+CMD ["npm", "start"]
