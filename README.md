@@ -1,7 +1,9 @@
 ## Node.js w/ Bower & Grunt
-[![dockeri.co](http://dockeri.co/image/digitallyseamless/nodejs-bower-grunt)](https://registry.hub.docker.com/u/digitallyseamless/nodejs-bower-grunt)
+[![dockeri.co](http://dockeri.co/image/robertark/nodejs-bower-grunt)](https://registry.hub.docker.com/u/digitallyseamless/nodejs-bower-grunt)
 
-This repository contains a **Dockerfile** of [Node.js](http://nodejs.org/) w/ [Bower](http://bower.io/) & [Grunt](http://gruntjs.com/) for [automated builds](https://registry.hub.docker.com/u/digitallyseamless/nodejs-bower-grunt/) published to the public [Docker Hub Registry](https://registry.hub.docker.com/).
+This repository contains a **Dockerfile** of [Node.js](http://nodejs.org/) w/ [Bower](http://bower.io/) & [Grunt](http://gruntjs.com/) for [automated builds](https://registry.hub.docker.com/u/robertark/nodejs-bower-grunt/) published to the public [Docker Hub Registry](https://registry.hub.docker.com/).
+
+## This is a fork from DigitallySeamless/docker-nodejs-bower-grunt
 
 ### Base Docker Image
 
